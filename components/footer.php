@@ -1,0 +1,1 @@
+<p class="text-white">Todos los derechos reservados</p>
