@@ -9,3 +9,9 @@
 .price {
   font-size: 1.5rem;
 }
+
+@media (max-width: 575.98px) { 
+  .main-title {
+    font-size: 1.8rem;
+  }
+ }

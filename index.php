@@ -22,7 +22,7 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
       <a class="navbar-brand text-white font-weight-bold" href="#">CompuStore</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -44,71 +44,71 @@
       </div>
     </nav>
     <div class="banner-header d-flex flex-column align-items-center justify-content-center">
-      <h1 class="w-50 mx-auto text-white text-center text-uppercase">Encuentra los mejores precios en laptops y accesorios en un solo lugar</h1>
-      <a href="#">COMPRA YA!</a>
+      <h1 class="w-50 mx-auto text-white text-center text-uppercase main-title">Encuentra los mejores precios en laptops y accesorios en un solo lugar</h1>
+      <a href="#products" type="button" class="btn btn-dark font-weight-bold mt-5">COMPRA YA! <i class="fas fa-arrow-down"></i></a>
     </div>
   </header>
   <main class="bg-light">
-    <section class="productos-section container-xl">
-      <div class="row border-bottom py-5 ">
-        <div class="col text-center bg-white py-2 mx-3">
-          <img src="./images/compu-1.jpg" alt="">
+    <section id="products" class="productos-section container">
+      <div class="row border-bottom py-5">
+        <div class="col-md text-center bg-white py-2 mx-2">
+          <img class="w-75" src="./images/compu-1.jpg" alt="">
           <p class="description border-top border-bottom py-3">
             COP. HP AIO ProOne 400 G5 i7-9700 8GB 1TB 23.8Inc HDMI 2USB3.1 FREE DOS Black
           </p>
-          <div class="info-shop d-flex justify-content-between align-items-center px-3">
+          <div class="info-shop d-flex justify-content-between align-items-center px-3 flex-wrap">
             <button class="btn btn-info">COMPRAR <i class="fas fa-shopping-cart"></i></button>
             <span class="price">$887.78</span>
           </div>
         </div>
-        <div class="col text-center bg-white py-2 mx-3">
-          <img src="./images/compu-3.jpg" alt="">
+        <div class="col-md text-center bg-white py-2 mx-2">
+          <img class="w-75" src="./images/compu-3.jpg" alt="">
           <p class="description border-top border-bottom py-3">
             COP. HP AIO ProOne 400 G5 i7-9700 8GB 1TB 23.8Inc HDMI 2USB3.1 FREE DOS Black
           </p>
-          <div class="info-shop d-flex justify-content-between align-items-center px-3">
+          <div class="info-shop d-flex justify-content-between align-items-center px-3 flex-wrap">
             <button class="btn btn-info">COMPRAR <i class="fas fa-shopping-cart"></i></button>
             <span class="price">$887.78</span>
           </div>
         </div>
-        <div class="col text-center bg-white py-2 mx-3">
-          <img src="./images/compu-2.jpg" alt="">
+        <div class="col-md  text-center bg-white py-2 mx-2">
+          <img class="w-75" src="./images/compu-2.jpg" alt="">
           <p class="description border-top border-bottom py-3">
             COP. HP AIO ProOne 400 G5 i7-9700 8GB 1TB 23.8Inc HDMI 2USB3.1 FREE DOS Black
           </p>
-          <div class="info-shop d-flex justify-content-between align-items-center px-3">
+          <div class="info-shop d-flex justify-content-between align-items-center px-3 flex-wrap">
             <button class="btn btn-info">COMPRAR <i class="fas fa-shopping-cart"></i></button>
             <span class="price">$887.78</span>
           </div>
         </div>
       </div>
-      <div class="row  border-bottom py-5">
-        <div class="col text-center bg-white py-2 mx-3">
-          <img src="./images/ram-1.jpg" alt="">
+      <div class="row border-bottom py-5">
+        <div class="col-md text-center bg-white py-2 mx-2">
+          <img class="w-75" src="./images/ram-1.jpg" alt="">
           <p class="description border-top border-bottom py-3">
             COP. HP AIO ProOne 400 G5 i7-9700 8GB 1TB 23.8Inc HDMI 2USB3.1 FREE DOS Black
           </p>
-          <div class="info-shop d-flex justify-content-between align-items-center px-3">
+          <div class="info-shop d-flex justify-content-between align-items-center px-3 flex-wrap">
             <button class="btn btn-info">COMPRAR <i class="fas fa-shopping-cart"></i></button>
             <span class="price">$887.78</span>
           </div>
         </div>
-        <div class="col text-center bg-white py-2 mx-3">
-          <img src="./images/ram-2.jpg" alt="">
+        <div class="col-md text-center bg-white py-2 mx-2">
+          <img class="w-75" src="./images/ram-2.jpg" alt="">
           <p class="description border-top border-bottom py-3">
             COP. HP AIO ProOne 400 G5 i7-9700 8GB 1TB 23.8Inc HDMI 2USB3.1 FREE DOS Black
           </p>
-          <div class="info-shop d-flex justify-content-between align-items-center px-3">
+          <div class="info-shop d-flex justify-content-between align-items-center px-3 flex-wrap">
             <button class="btn btn-info">COMPRAR <i class="fas fa-shopping-cart"></i></button>
             <span class="price">$887.78</span>
           </div>
         </div>
-        <div class="col text-center bg-white py-2 mx-3">
-          <img src="./images/ram-3.jpg" alt="">
+        <div class="col-md text-center bg-white py-2 mx-2">
+          <img class="w-75" src="./images/ram-3.jpg" alt="">
           <p class="description border-top border-bottom py-3">
             COP. HP AIO ProOne 400 G5 i7-9700 8GB 1TB 23.8Inc HDMI 2USB3.1 FREE DOS Black
           </p>
-          <div class="info-shop d-flex justify-content-between align-items-center px-3">
+          <div class="info-shop d-flex justify-content-between align-items-center px-3 flex-wrap">
             <button class="btn btn-info">COMPRAR <i class="fas fa-shopping-cart"></i></button>
             <span class="price">$887.78</span>
           </div>
@@ -116,7 +116,9 @@
       </div>
     </section>
   </main>
-  <footer></footer>
+  <footer class="bg-dark text-center py-3">
+    <p class="text-white">Todos los derechos reservados</p>
+  </footer>
 
 
 
