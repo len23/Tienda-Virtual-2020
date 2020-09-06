@@ -1,0 +1,11 @@
+/* HEADER */
+.banner-header {
+  background-image: linear-gradient(to right, rgba(74, 106, 136, 0.603) , rgba(88, 165, 196, 0.514)), url('../images/header-compu.jpg');
+  background-size: cover;
+  height: 80vh;
+}
+/* PRODUCTOS */
+
+.price {
+  font-size: 1.5rem;
+}
