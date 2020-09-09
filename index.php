@@ -23,8 +23,13 @@
   </header>
   
   <main class="bg-light">
-    <section id="products" class="productos-section container">\
-      <?php include './components/products.php'; ?>
+    <section id="products" class="productos-section container">
+      <?php 
+        include './config/tiendaDB.php'; 
+        $productsObj = new ProductoDB();
+        $productsObj->obtenerProductos();
+      ?>
+      
     </section>
   </main>
 
