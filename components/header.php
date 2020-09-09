@@ -16,7 +16,7 @@
           </li>
         </ul>
         <div class="buttons-cont">
-          <button class="btn btn-light mr-3">Login</button>
+          <button class="btn btn-light mr-3" data-toggle="modal" data-target="#exampleModal">Login</button>
           <button class="btn btn-info">Carrito</button>
         </div>
        

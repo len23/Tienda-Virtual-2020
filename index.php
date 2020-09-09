@@ -23,6 +23,7 @@
   </header>
   
   <main class="bg-light">
+    <?php include './layouts/modal-login.php';?>
     <section id="products" class="productos-section container">
       <?php 
         include './config/tiendaDB.php'; 
