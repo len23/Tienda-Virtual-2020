@@ -21,9 +21,10 @@
   <header>
    <?php include './components/header.php';?>
   </header>
-  
   <main class="bg-light">
+  <?php include './layouts/modal-carrito.php'; ?>
     <?php include './layouts/modal-login.php';?>
+   
     <section id="products" class="productos-section container">
       <?php 
         include './config/tiendaDB.php'; 
@@ -33,7 +34,6 @@
       
     </section>
   </main>
-
   <footer class="bg-dark text-center py-3">
     <?php include './components/footer.php'; ?>
   </footer>
