@@ -9,21 +9,20 @@
             </button>
           </div>
           <div class="modal-body">
-            <form class="w-75 mx-auto" action="./config/login.php">
+            <form class="w-75 mx-auto" method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
               <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1"aria-describedby="emailHelp">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your emailwith anyone else.</small>
+                <label for="username">Email address</label>
+                <input type="email" class="form-control" id="username"aria-describedby="emailHelp" name="username">
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <input type="password" class="form-control" id="exampleInputPassword1" name="password">
               </div>
-              <button type="submit" class="btn btn-primary d-block mx-auto">Submit</button>
+              <input type="submit" class="btn btn-primary d-block mx-auto" name="submit">
             </form>
           </div>
           <div class="modal-footer justify-content-center">
-            <p>No tienes una cuenta: <a href="#">Regístrate</a></p>
+            <p>No tienes una cuenta: <a href="#" data-toggle="modal" data-target="#submitForm" data-dismiss="modal">Regístrate</a></p>
           </div>
         </div>
       </div>

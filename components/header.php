@@ -1,4 +1,3 @@
-
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
       <a class="navbar-brand text-white font-weight-bold" href="#">CompuStore</a>
       <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -16,9 +15,26 @@
           </li>
         </ul>
         <div class="buttons-cont">
-          <button class="btn btn-light mr-3" data-toggle="modal" data-target="#exampleModal">Login</button>
+          <!-- Revisamos las cookies -->
+          <?php 
+          var_dump($_COOKIE);
+            if(isset($_COOKIE['username'])){
+          ?>
+          <a href="#" class="buttons-cont_user">Hola <?php echo $_COOKIE['username']?></a>
           <button class="btn btn-info">Carrito</button>
         </div>
+          <?php   
+            }else {
+          ?>
+          <div class="buttons-cont">
+            <button class="btn btn-light mr-3" data-toggle="modal" data-target="#exampleModal">Login</button>
+            <button class="btn btn-info">Carritoasd</button>
+          </div>
+          <?php    
+            }
+          ?>
+
+        
        
       </div>
     </nav>

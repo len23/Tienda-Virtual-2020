@@ -1,3 +1,7 @@
+<?php 
+  include './config/login.php';
+  include './config/tiendaDB.php';
+?>
 <!doctype html>
 <html lang="en">
 
@@ -22,12 +26,12 @@
    <?php include './components/header.php';?>
   </header>
   <main class="bg-light">
-  <?php include './layouts/modal-carrito.php'; ?>
-    <?php include './layouts/modal-login.php';?>
-   
-    <section id="products" class="productos-section container">
+  <?php include './layouts/modal-carrito.php';
+        include './layouts/modal-login.php';
+        include './layouts/modal-submit.php';
+  ?>  
+   <section id="products" class="productos-section container">
       <?php 
-        include './config/tiendaDB.php'; 
         $productsObj = new ProductoDB();
         $productsObj->obtenerProductos();
       ?>
