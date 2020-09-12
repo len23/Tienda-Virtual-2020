@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Sep 12, 2020 at 05:40 PM
+-- Generation Time: Sep 12, 2020 at 11:41 PM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -236,16 +236,16 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `username` varchar(30) NOT NULL,
   `USUARIO_ESTADO` varchar(20) DEFAULT NULL,
   `USUARIO_FECHAINGRES` timestamp NULL DEFAULT NULL,
+  `names` varchar(30) NOT NULL,
   PRIMARY KEY (`user_id`,`ci`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `usuario`
 --
 
-INSERT INTO `usuario` (`user_id`, `ci`, `password`, `username`, `USUARIO_ESTADO`, `USUARIO_FECHAINGRES`) VALUES
-(6, '0401485370', '8cb2237d0679ca88db6464eac60da96345513964', 'lenin.montalvo@hotmail.com', NULL, NULL),
-(3, '0203948576', '8cb2237d0679ca88db6464eac60da96345513964', 'Alex', NULL, NULL);
+INSERT INTO `usuario` (`user_id`, `ci`, `password`, `username`, `USUARIO_ESTADO`, `USUARIO_FECHAINGRES`, `names`) VALUES
+(11, '0401485370', '8cb2237d0679ca88db6464eac60da96345513964', 'alex@hotmail.com', NULL, NULL, 'Alex Montalvo');
 
 -- --------------------------------------------------------
 
