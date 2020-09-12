@@ -12,11 +12,11 @@
             <form class="w-75 mx-auto" method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
               <div class="form-group">
                 <label for="username">Email address</label>
-                <input type="email" class="form-control" id="username"aria-describedby="emailHelp" name="username">
+                <input type="email" class="form-control" id="username"aria-describedby="emailHelp" name="username" required>
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                <input type="password" class="form-control" id="exampleInputPassword1" name="password" required>
               </div>
               <input type="submit" class="btn btn-primary d-block mx-auto" name="submit">
             </form>

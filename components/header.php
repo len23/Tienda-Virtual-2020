@@ -17,10 +17,11 @@
         <div class="buttons-cont">
           <!-- Revisamos las cookies -->
           <?php 
-          var_dump($_COOKIE);
             if(isset($_COOKIE['username'])){
+
           ?>
-          <a href="#" class="buttons-cont_user">Hola <?php echo $_COOKIE['username']?></a>
+          <a href="#" class="buttons-cont_user"><i class="far fa-user"></i> <?php echo $_COOKIE['username']?></a>
+          <button class="btn btn-danger">Log Out</button>
           <button class="btn btn-info">Carrito</button>
         </div>
           <?php   
@@ -28,7 +29,7 @@
           ?>
           <div class="buttons-cont">
             <button class="btn btn-light mr-3" data-toggle="modal" data-target="#exampleModal">Login</button>
-            <button class="btn btn-info">Carritoasd</button>
+            <button class="btn btn-info">Carrito</button>
           </div>
           <?php    
             }

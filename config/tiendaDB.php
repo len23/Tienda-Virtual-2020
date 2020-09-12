@@ -8,7 +8,6 @@
       if(!$result = mysqli_query($enlace,$query)){
         echo '<p>Hubo un error</p>';
       }
-      /* var_dump(mysqli_fetch_array($result, MYSQLI_ASSOC)); */
 ?>
 
 

@@ -12,26 +12,26 @@
             </button>
           </div>
           <div class="modal-body">
-            <form class="w-75 mx-auto" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+            <form class="w-75 mx-auto" action="./config/register.php" method="post">
               <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="Email">
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="Email" required>
               </div>
               <div class="form-group">
                 <label for="names">Nombres:</label>
-                <input type="text" class="form-control" id="names" name="Names">
+                <input type="text" class="form-control" id="names" name="Names" required>
               </div>
               <div class="form-group">
                 <label for="password">Contraseña</label>
-                <input type="password" class="form-control" id="password" name="Password">
+                <input type="password" class="form-control" id="password" name="Password" required>
               </div>
               <div class="form-group">
                 <label for="secondPassword">Repite la Contraseña</label>
-                <input type="password" class="form-control" id="secondPassword" name="Second_Password">
+                <input type="password" class="form-control" id="secondPassword" name="Second_Password" required>
               </div>
               <button type="submit" class="btn btn-primary d-block mx-auto" name="submit2">Ingresar</button>
             </form>
-            <?php echo $mensaje?>
+            <?php if(isset($mensaje)) echo $mensaje?>
           </div>
         </div>
       </div>

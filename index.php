@@ -1,27 +1,8 @@
 <?php 
+ include './components/general_header.php';
   include './config/login.php';
   include './config/tiendaDB.php';
 ?>
-<!doctype html>
-<html lang="en">
-
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles/style.css">
-    <script src="https://kit.fontawesome.com/1e179ba697.js" crossorigin="anonymous"></script>
-
-
-  <title>Computer Store</title>
-</head>
-
-<body>
   <header>
    <?php include './components/header.php';?>
   </header>
@@ -30,12 +11,12 @@
         include './layouts/modal-login.php';
         include './layouts/modal-submit.php';
   ?>  
+
    <section id="products" class="productos-section container">
       <?php 
         $productsObj = new ProductoDB();
         $productsObj->obtenerProductos();
       ?>
-      
     </section>
   </main>
   <footer class="bg-dark text-center py-3">
