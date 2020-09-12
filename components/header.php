@@ -21,7 +21,7 @@
 
           ?>
           <a href="#" class="buttons-cont_user"><i class="far fa-user"></i> <?php echo $_COOKIE['username']?></a>
-          <button class="btn btn-danger">Log Out</button>
+          <a href="log-out.php" class="btn btn-danger">Log Out</a>
           <button class="btn btn-info">Carrito</button>
         </div>
           <?php   
