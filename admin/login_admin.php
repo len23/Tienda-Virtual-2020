@@ -1,6 +1,7 @@
 <?php 
+  session_start();
   //Si el usuario no esta logueado, se procederá a loguearlo
-  if(!isset($_COOKIE['user_id'])){ //Revisa si no esta establecida la cookie
+  if(!isset($_SESSION['user_id'])){ //Revisa si no esta establecida la cookie
      //Revisa si no se ha hecho el submit
         require_once('../config/coneccion.php'); //Se conecta a la base
         $user_username = mysqli_real_escape_string($enlace, trim($_POST['username']));
@@ -13,8 +14,10 @@
           if(mysqli_num_rows($data) == 1) {
             //Si la extraxion de la base fue exitosa, establecemos cookies
             $row = mysqli_fetch_array($data);
-            setcookie('user_id', $row['user_id'],time() + (60 * 60 * 24 * 30));
-            setcookie('username', $row['names'],time() + (60 * 60 * 24 * 30));
+            $_SESSION['user_id'] = $row['user_id'];
+            $_SESSION['username'] = $row['names'];
+            /* setcookie('user_id', $row['user_id'],time() + (60 * 60 * 24 * 30));
+            setcookie('username', $row['names'],time() + (60 * 60 * 24 * 30)); */
             $admin_url = 'http://' . $_SERVER['HTTP_HOST'] . '/Tienda-Virtual-2020/admin';
             header('Location:' . $admin_url);
            

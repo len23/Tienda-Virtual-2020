@@ -1,7 +1,6 @@
 <?php 
-  include '../components/general_header.php';
-
-  if (!isset($_COOKIE['username'])) {
+  include 'admin_header.php';
+  if (!isset($_SESSION['username'])) {
 
 ?>
 <div class="container w-50 mx-auto vh-100 d-flex align-items-center justify-content-center flex-column">
@@ -26,5 +25,6 @@
 
 ?>
 <script src="../js/app.js"></script>
-</body>
-</html>
+<?php 
+  include 'admin_footer.php';
+?>

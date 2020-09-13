@@ -17,10 +17,11 @@
         <div class="buttons-cont">
           <!-- Revisamos las cookies -->
           <?php 
-            if(isset($_COOKIE['username'])){
+            /* session_start(); */
+            if(isset($_SESSION['username'])){
 
           ?>
-          <a href="#" class="buttons-cont_user"><i class="far fa-user"></i> <?php echo $_COOKIE['username']?></a>
+          <a href="#" class="buttons-cont_user"><i class="far fa-user"></i> <?php echo $_SESSION['username']?></a>
           <a href="./config/log-out.php" class="btn btn-danger">Log Out</a>
           <button class="btn btn-info">Carrito</button>
         </div>
