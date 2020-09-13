@@ -6,12 +6,14 @@
    $price_product = mysqli_real_escape_string($enlace,trim($_POST['prec_prod']));
    $img_product = './images/compu-3.jpg';
 
-
-  $query = "INSERT INTO `producto` (`PRODUCTO_ID`, `CATEGORY`, `DESCRIPCION`, `IMAGE`, `PRECIO`) VALUES (NULL, '$category_product', '$descp_product', '$img_product', '$price_product')";
+  if(!empty($category_product) && !empty($descp_product) && !empty($price_product) && !empty($img_product)) {
+    $query = "INSERT INTO `producto` (`PRODUCTO_ID`, `CATEGORY`, `DESCRIPCION`, `IMAGE`, `PRECIO`) VALUES (NULL, '$category_product', '$descp_product', '$img_product', '$price_product')";
   
-  $data = mysqli_query($enlace, $query);
+    $data = mysqli_query($enlace, $query);
 
-  $admin_url = 'http://' . $_SERVER['HTTP_HOST'] . '/Tienda-Virtual-2020/admin';
-  header('Location:' . $admin_url);
+    $admin_url = 'http://' . $_SERVER['HTTP_HOST'] . '/Tienda-Virtual-2020/admin?message="Producto Ingresado con exito"';
+    header('Location:' . $admin_url);
+  }
+  
   
 ?>

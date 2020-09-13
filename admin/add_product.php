@@ -1,4 +1,12 @@
+  
+  
   <div class="container py-5">
+  <?php 
+  
+    if(isset($_GET['message'])) {
+      echo "<p class='text-center bg-success text-white py-4 w-50 mx-auto succes-product' >". $_GET['message'] ."</p>";
+    }
+  ?>
     <form action="add_product_method.php" method="post">
       <div class="row border-bottom pb-3">
         <div class="col-4">
