@@ -1,10 +1,13 @@
 <?php 
- include './components/general_header.php';
+  include './config/variables.php';
+  include './components/general_header.php';
   include './config/login.php';
   include './config/tiendaDB.php';
 ?>
   <header>
    <?php include './components/header.php';?>
+   <?php include './layouts/banner.php';?>
+ 
   </header>
   <main class="bg-light">
   <?php include './layouts/modal-carrito.php';

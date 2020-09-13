@@ -14,15 +14,15 @@
 
         if(!empty($user_username) && !empty($user_password)) {
           //Buscamos la informacion en la base de datos
-          $query = "SELECT user_id, username, names FROM usuario WHERE username = '$user_username' AND password = SHA('$user_password')";
+          $query = "SELECT user_id, username, names,role FROM usuario WHERE username = '$user_username' AND password = SHA('$user_password') AND role = 'customer'";
           $data = mysqli_query($enlace, $query);
           if(mysqli_num_rows($data) == 1) {
             //Si la extraxion de la base fue exitosa, establecemos cookies
             $row = mysqli_fetch_array($data);
             $_SESSION['user_id'] = $row['user_id'];
             $_SESSION['username'] = $row['names'];
-           /*  setcookie('user_id', $row['user_id'],time() + (60 * 60 * 24 * 30));
-            setcookie('username', $row['names'],time() + (60 * 60 * 24 * 30)); */
+            setcookie('user_id', $row['user_id'],time() + (60 * 60 * 24 * 30));
+            setcookie('username', $row['names'],time() + (60 * 60 * 24 * 30));
             $home_url = 'http://' . $_SERVER['HTTP_HOST'] . '/Tienda-Virtual-2020/index.php';
             header('Location:' . $home_url);
            
@@ -32,8 +32,9 @@
             header('Location:' . $message_url);
           }
         }
-    }else {
-      $error_msg = "Ingrese usuario o contrasena para ingresar";
+    }else if(isset($_COOKIE['user_id']) && isset($_COOKIE['username'])){
+      $_SESSION['user_id'] = $_COOKIE['user_id'];
+      $_SESSION['username'] = $_COOKIE['username'];
     }
   }
 ?>

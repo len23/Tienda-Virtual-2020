@@ -1,7 +1,7 @@
 <?php 
-  include 'admin_header.php';
-  if (!isset($_SESSION['username'])) {
-
+include 'admin_header.php';
+  if (!isset($_SESSION['username']) && !isset($_COOKIE['username'])) {
+    
 ?>
 <div class="container w-50 mx-auto vh-100 d-flex align-items-center justify-content-center flex-column">
 <h1 class="text-center mt-n5 mb-4 text-uppercase">Administrador de CompuStore</h1>
