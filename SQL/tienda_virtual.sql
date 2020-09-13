@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Sep 12, 2020 at 11:41 PM
+-- Generation Time: Sep 13, 2020 at 04:30 AM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -182,18 +182,18 @@ CREATE TABLE IF NOT EXISTS `permiso` (
 DROP TABLE IF EXISTS `producto`;
 CREATE TABLE IF NOT EXISTS `producto` (
   `PRODUCTO_ID` int(11) NOT NULL AUTO_INCREMENT,
-  `NOMBRE` varchar(30) NOT NULL,
+  `CATEGORY` varchar(30) NOT NULL,
   `DESCRIPCION` varchar(100) NOT NULL,
   `IMAGE` varchar(100) NOT NULL,
   `PRECIO` float NOT NULL,
   PRIMARY KEY (`PRODUCTO_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `producto`
 --
 
-INSERT INTO `producto` (`PRODUCTO_ID`, `NOMBRE`, `DESCRIPCION`, `IMAGE`, `PRECIO`) VALUES
+INSERT INTO `producto` (`PRODUCTO_ID`, `CATEGORY`, `DESCRIPCION`, `IMAGE`, `PRECIO`) VALUES
 (1, 'Desktop', 'COP. HP AIO ProOne 400 G5 i7-9700 8GB 1TB 23.8Inc HDMI 2USB3.1 FREE DOS Black\r\n\r\n', './images/compu-1.jpg', 540.5),
 (2, 'Desktop', 'COP. DELL AIO OPTIPLEX 5270 I5-9500 8GB 256GB 21.5Inc. WC W10-Pro Black', './images/compu-2.jpg', 1041.11),
 (3, 'Desktop All in One', 'COP. APPLE iMac Intel Core I5 8GB 256GB-SSD 27Inc 5K Retina 4USB3.0 OS Silver', './images/compu-3.jpg', 2348.89),
@@ -231,36 +231,21 @@ CREATE TABLE IF NOT EXISTS `proveedor` (
 DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE IF NOT EXISTS `usuario` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
-  `ci` varchar(10) NOT NULL,
   `password` varchar(40) NOT NULL,
   `username` varchar(30) NOT NULL,
-  `USUARIO_ESTADO` varchar(20) DEFAULT NULL,
-  `USUARIO_FECHAINGRES` timestamp NULL DEFAULT NULL,
+  `register_date` timestamp NULL DEFAULT NULL,
   `names` varchar(30) NOT NULL,
-  PRIMARY KEY (`user_id`,`ci`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+  `Role` varchar(30) NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `usuario`
 --
 
-INSERT INTO `usuario` (`user_id`, `ci`, `password`, `username`, `USUARIO_ESTADO`, `USUARIO_FECHAINGRES`, `names`) VALUES
-(11, '0401485370', '8cb2237d0679ca88db6464eac60da96345513964', 'alex@hotmail.com', NULL, NULL, 'Alex Montalvo');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `usuario_permiso`
---
-
-DROP TABLE IF EXISTS `usuario_permiso`;
-CREATE TABLE IF NOT EXISTS `usuario_permiso` (
-  `USUARIO_ID` int(11) NOT NULL,
-  `USUARIO_CEDULA` varchar(10) NOT NULL,
-  `PERMISO_ID` int(11) NOT NULL,
-  PRIMARY KEY (`USUARIO_ID`,`USUARIO_CEDULA`,`PERMISO_ID`),
-  KEY `FK_USUARIO_PERMISO2` (`PERMISO_ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+INSERT INTO `usuario` (`user_id`, `password`, `username`, `register_date`, `names`, `Role`) VALUES
+(11, '8cb2237d0679ca88db6464eac60da96345513964', 'alex@hotmail.com', '2020-09-13 01:44:55', 'Alex Montalvo', 'customer'),
+(13, 'd033e22ae348aeb5660fc2140aec35850c4da997', 'silvio_admin@hotmail.com', '2020-09-13 01:51:44', 'Silvio Montalvo', 'admin');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
