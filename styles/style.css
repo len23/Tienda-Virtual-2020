@@ -24,6 +24,10 @@
   font-size: 1.5rem;
 }
 
+.cant_prod {
+  width: 2.5rem;
+}
+
 /* Ya Registrado */
 .user_exists-info {
   font-size: 2rem;
