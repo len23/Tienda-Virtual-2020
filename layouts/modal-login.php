@@ -9,7 +9,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form class="w-75 mx-auto" method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
+            <form class="w-75 mx-auto" method="post" action="<?php echo $log_in?>">
               <div class="form-group">
                 <label for="username">Email address</label>
                 <input type="email" class="form-control" id="username"aria-describedby="emailHelp" name="username" required>
