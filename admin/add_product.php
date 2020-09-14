@@ -7,20 +7,25 @@
       echo "<p class='text-center bg-success text-white py-4 w-50 mx-auto succes-product' >". $_GET['message'] ."</p>";
     }
   ?>
-    <form action="add_product_method.php" method="post">
+    <form action="add_product_method.php" method="post" enctype="multipart/form-data">
       <div class="row border-bottom pb-3">
         <div class="col-4">
-          <div class="border h-75"></div>
-          <button class="btn btn-primary mt-3">Agregar Imagen</button>
+          <div class="border h-75 preview">
+            
+          </div>
+          <div class="form-group">
+            <label for="uploadImage" class="btn btn-info mt-4">Upload Image</label>
+            <input type="file" class="form-control-file" id="uploadImage" name="uploadImage">
+          </div>
         </div>
         <div class="col-8">
           <div class="form-group">
             <label for="category_product">Categoría de producto</label>
             <select class="custom-select" id="category_product" name="category_product">
               <option selected>Eliga...</option>
-              <option value="1">Desktop</option>
-              <option value="2">Desktop All in One</option>
-              <option value="3">RAM Memory</option>
+              <option value="Desktop">Desktop</option>
+              <option value="Desktop All in One">Desktop All in One</option>
+              <option value="RAM Memory">RAM Memory</option>
             </select>
           </div>
           <div class="form-group">

@@ -1,4 +1,5 @@
 <?php 
+include 'variables_admin.php';
 include 'admin_header.php';
   if (!isset($_SESSION['username']) && !isset($_COOKIE['username'])) {
     

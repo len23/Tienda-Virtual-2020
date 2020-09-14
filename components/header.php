@@ -11,7 +11,7 @@
             <a class="nav-link text-white" href="<?php echo $home?>">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">Productos</a>
+            <a class="nav-link text-white" href="#produstStore">Productos</a>
           </li>
         </ul>
         <div class="buttons-cont">

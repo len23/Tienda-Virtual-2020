@@ -12,7 +12,7 @@
 ?>
 
 
-    <div class="row border-bottom py-5">
+    <div id="produstStore" class="row border-bottom py-5">
       <?php
         while ($result_ar = mysqli_fetch_assoc ($result)) {
            include './layouts/modal-carrito.php'

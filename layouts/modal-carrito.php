@@ -20,7 +20,7 @@
             ?>
           </div>
           <div class="modal-body d-flex align-items-center">
-            <img src="<?php echo $result_ar['IMAGE']?>" alt="sax">
+            <img class="w-50" src="<?php echo $result_ar['IMAGE']?>" alt="sax">
             <p class="px-3"><?php echo $result_ar['DESCRIPCION']?></p>
           </div>
           <div class="modal-footer">
