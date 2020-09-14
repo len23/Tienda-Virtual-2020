@@ -1,10 +1,5 @@
-/* setTimeout(() => {
-  document.querySelector('.succes-product').classList.add("d-none");
-}, 4000); */
-
 /* Para agregar producto a array de carrito */
-
-let prodsAdded = [];
+let url = 'http://localhost/Tienda-Virtual-2020/config/add_to_car.php/';
  
 function addProduct(id_prod,user_id) { 
   let quantity= document.getElementById(`quantity-${id_prod}`);
@@ -15,11 +10,21 @@ function addProduct(id_prod,user_id) {
   btn_addCarrito.classList.add('btn-success');
   btn_addCarrito.classList.add('disabled');
 
-  var typ = document.createAttribute("readonly");
+  let typ = document.createAttribute("readonly");
   quantity.attributes.setNamedItem(typ);
- 
-  prodsAdded.push({prod_id:id_prod,quantity:quantity.value})
 
-  console.log(prodsAdded);
+ /*  let data = {prod_id:id_prod,quantity:quantity.value,user_id:user_id}; */
+  url = url + `?user_id=${user_id}&prod_id=${id_prod}&quantity=${quantity.value}`;
+ 
+  fetch(url, {
+    method: 'POST', // or 'PUT'
+    /* body: JSON.stringify(data), */ // data can be `string` or {object}!
+    /* headers:{
+      'Content-Type': 'application/json'
+    } */
+  }).then(
+    res => console.log(res)
+    )
+ 
   
 }

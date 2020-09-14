@@ -1,3 +1,9 @@
+setTimeout(() => {
+  document.querySelector('.succes-product').classList.add("d-none");
+}, 4000);
+
+
+/* Para previsualizar la imagen */
 const input_image  = document.querySelector('#uploadImage');
 const preview = document.querySelector('.preview');
 
