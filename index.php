@@ -10,7 +10,7 @@
  
   </header>
   <main class="bg-light">
-  <?php include './layouts/modal-carrito.php';
+  <?php 
         include './layouts/modal-login.php';
         include './layouts/modal-submit.php';
   ?>  
