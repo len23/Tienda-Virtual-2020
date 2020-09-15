@@ -24,18 +24,18 @@
             <div class="px-3">
               <p><?php echo $result_ar['DESCRIPCION']?></p>
               <label for="quantity">Cantidad</label>
-              <input class="cant_prod" id="quantity-<?php echo $result_ar['PRODUCTO_ID']?>" type="number">
+              <input class="cant_prod" id="quantity-<?php echo $result_ar['PRODUCTO_ID']?>" type="number" min="1">
             </div>
           </div>
           <div class="modal-footer">
 
            
            <?php if(isset($_SESSION['user_id'])) { 
-               
+            echo '<a id="go-to-cart-'.$result_ar['PRODUCTO_ID'].'" class="btn btn-warning text-danger d-none" href="http://localhost/Tienda-Virtual-2020/pages/carrito.php">Ir al carrito</a>';
             echo  '<a type="button" onclick="addProduct('. $result_ar['PRODUCTO_ID'] .','.$_SESSION['user_id'].')" id="add_carrito-'. $result_ar['PRODUCTO_ID'].'"  class="btn btn-info">Agregar al carrito</a>';
             echo  '<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>';
            } else{ 
-            echo '<button class="btn btn-info mr-3" data-toggle="modal" data-target="#exampleModal" data-dismiss="modal">Agregar al Carrito</button>';
+            echo '<a href="#" class="btn btn-info mr-3" data-toggle="modal" data-target="#exampleModal" data-dismiss="modal">Agregar al Carrito</a>';
             echo  '<button type="button" class="btn btn-danger id="add_carrito" data-dismiss="modal">Cerrar</button>';
             }
             ?>

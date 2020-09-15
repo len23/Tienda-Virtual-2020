@@ -28,6 +28,10 @@
   width: 2.5rem;
 }
 
+.min-vh-75 {
+  min-height: 77vh;
+}
+
 /* Ya Registrado */
 .user_exists-info {
   font-size: 2rem;

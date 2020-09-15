@@ -12,7 +12,7 @@
       <p><strong>Total:</strong> $<?php echo $cantidad * $precio_prod?></p>
     </div>
     <div class="text-center flex-grow-1">
-      <a href="" class="btn btn-danger">Eliminar</a>
+      <a href="<?php echo $delete_prod_carrito . '?carrito_id=' . $carrito_id?>" class="btn btn-danger">Eliminar</a>
     </div>
     </div>
   </div>
