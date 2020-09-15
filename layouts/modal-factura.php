@@ -14,26 +14,27 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form >
           <div class="form-group">
-            <label for="exampleInputEmail1">Nombres: </label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="nombres_form">Nombres: </label>
+            <input type="text" class="form-control" id="nombres_form" required>
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Apellidos: </label>
-            <input type="text" class="form-control" id="exampleInputPassword1">
+            <label for="apellidos_form">Apellidos: </label>
+            <input id="apellidos_form" type="text" class="form-control" required>
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Nro de Cédula: </label>
-            <input type="text" class="form-control" id="exampleInputPassword1">
+            <label for="cedula_form">Nro de Cédula: </label>
+            <input id="cedula_form" type="text" class="form-control" required>
+            <p id="warning_cedula" class="text-danger"></p>
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Dirección: </label>
-            <input type="text" class="form-control" id="exampleInputPassword1">
+            <label for="direccion_form">Dirección: </label>
+            <input id="direccion_form" type="text" class="form-control" required>
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Teléfono: </label>
-            <input type="text" class="form-control" id="exampleInputPassword1">
+            <label for="telefono_form">Teléfono: </label>
+            <input id="telefono_form" type="text" class="form-control" required>
           </div>
           <button id="submit_factura" type="submit" class="btn btn-primary">Submit</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
