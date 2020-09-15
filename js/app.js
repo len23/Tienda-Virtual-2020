@@ -26,6 +26,4 @@ function addProduct(id_prod,user_id) {
   }).then(
     res => console.log(res)
     )
-
-    
 }
