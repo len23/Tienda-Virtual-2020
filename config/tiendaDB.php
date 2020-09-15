@@ -4,14 +4,14 @@
       include "coneccion.php";
 
       $query = "SELECT * FROM PRODUCTO";
+      $prod_ids = array();
       
 
       if(isset($_SESSION['user_id'])) {
         $user_id = $_SESSION['user_id'];
         $query_carrito = "SELECT DISTINCT producto_id FROM `carrito` WHERE user_id='$user_id'";
         $result_prod = mysqli_query($enlace, $query_carrito);
-        $prod_ids = array();
-       
+      
         while ( $result_ar_prod = mysqli_fetch_assoc ($result_prod)) {
           array_push($prod_ids,$result_ar_prod['producto_id']);
         }

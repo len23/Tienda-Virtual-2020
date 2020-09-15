@@ -27,3 +27,11 @@ function addProduct(id_prod,user_id) {
     res => console.log(res)
     )
 }
+
+/* FACTURACION */
+let submit_factura_btn = document.querySelector('#submit_factura');
+submit_factura_btn.addEventListener('click',facturar);
+function facturar(e) {
+  e.preventDefault();
+  console.log('FACTURAR',e);
+}

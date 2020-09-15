@@ -28,12 +28,12 @@
           </ul>
           <div class="buttons_admin">
           <?php 
-          if(!isset($_SESSION['username']) && !isset($_COOKIE['username'])){
+          if(!isset($_SESSION['username_admin']) && !isset($_COOKIE['username_admin'])){
            echo '<i class="far fa-user"></i>';
           }
           else{
-            $_SESSION['username'] = $_COOKIE['username'];
-            echo '<a class="mr-5" href="#"><i class="far fa-user"></i> '. $_SESSION['username'] . '</a>';
+            $_SESSION['username_admin'] = $_COOKIE['username_admin'];
+            echo '<a class="mr-5" href="#"><i class="far fa-user"></i> '. $_SESSION['username_admin'] . '</a>';
             echo '<a href="logout_admin.php" class="btn btn-danger"> Log Out </a>';
           }
             ?>

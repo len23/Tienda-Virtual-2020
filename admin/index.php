@@ -1,7 +1,7 @@
 <?php 
 include 'variables_admin.php';
 include 'admin_header.php';
-  if (!isset($_SESSION['username']) && !isset($_COOKIE['username'])) {
+  if (!isset($_SESSION['username_admin']) && !isset($_COOKIE['username_admin'])) {
     
 ?>
 <div class="container w-50 mx-auto vh-100 d-flex align-items-center justify-content-center flex-column">
