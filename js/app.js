@@ -13,6 +13,8 @@ function addProduct(id_prod,user_id) {
 
   go_cart_btn.classList.remove('d-none');
 
+ 
+
   let typ = document.createAttribute("readonly");
   quantity.attributes.setNamedItem(typ);
 
@@ -21,13 +23,9 @@ function addProduct(id_prod,user_id) {
  
   fetch(url, {
     method: 'POST', // or 'PUT'
-    /* body: JSON.stringify(data), */ // data can be `string` or {object}!
-    /* headers:{
-      'Content-Type': 'application/json'
-    } */
   }).then(
     res => console.log(res)
     )
- 
-  
+
+    
 }

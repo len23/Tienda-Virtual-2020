@@ -33,7 +33,7 @@
            <?php if(isset($_SESSION['user_id'])) { 
             echo '<a id="go-to-cart-'.$result_ar['PRODUCTO_ID'].'" class="btn btn-warning text-danger d-none" href="http://localhost/Tienda-Virtual-2020/pages/carrito.php">Ir al carrito</a>';
             echo  '<a type="button" onclick="addProduct('. $result_ar['PRODUCTO_ID'] .','.$_SESSION['user_id'].')" id="add_carrito-'. $result_ar['PRODUCTO_ID'].'"  class="btn btn-info">Agregar al carrito</a>';
-            echo  '<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>';
+            echo  '<button onClick="history.go(0);" type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>';
            } else{ 
             echo '<a href="#" class="btn btn-info mr-3" data-toggle="modal" data-target="#exampleModal" data-dismiss="modal">Agregar al Carrito</a>';
             echo  '<button type="button" class="btn btn-danger id="add_carrito" data-dismiss="modal">Cerrar</button>';
