@@ -33,9 +33,18 @@
   font-size: 2rem;
 }
 
+/* Carrito de compras */
+.img_carrito_prod {
+  max-width: 13rem;
+}
+
+.descp_carrito_prod {
+  max-width: 24rem;
+}
 
 @media (max-width: 575.98px) { 
   .main-title {
     font-size: 1.8rem;
   }
  }
+
