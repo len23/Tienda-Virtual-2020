@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Sep 15, 2020 at 05:28 AM
+-- Generation Time: Sep 15, 2020 at 05:01 PM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -36,7 +36,15 @@ CREATE TABLE IF NOT EXISTS `carrito` (
   PRIMARY KEY (`carrito_id`),
   KEY `user_id` (`user_id`),
   KEY `producto_id` (`producto_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `carrito`
+--
+
+INSERT INTO `carrito` (`carrito_id`, `user_id`, `producto_id`, `cantidad`) VALUES
+(55, 11, 1, 2),
+(56, 11, 3, 2);
 
 -- --------------------------------------------------------
 
