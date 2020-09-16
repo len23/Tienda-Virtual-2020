@@ -15,27 +15,30 @@
       </div>
       <div class="modal-body">
         <form >
+          <p id="general_warning" class="text-danger text-center"></p>
           <div class="form-group">
             <label for="nombres_form">Nombres: </label>
-            <input type="text" class="form-control" id="nombres_form" required>
+            <input type="text" class="form-control" id="nombres_form">
           </div>
           <div class="form-group">
             <label for="apellidos_form">Apellidos: </label>
-            <input id="apellidos_form" type="text" class="form-control" required>
+            <input id="apellidos_form" type="text" class="form-control">
           </div>
           <div class="form-group">
             <label for="cedula_form">Nro de Cédula: </label>
-            <input id="cedula_form" type="text" class="form-control" required>
+            <input id="cedula_form" type="text" class="form-control">
             <p id="warning_cedula" class="text-danger"></p>
           </div>
           <div class="form-group">
             <label for="direccion_form">Dirección: </label>
-            <input id="direccion_form" type="text" class="form-control" required>
+            <input id="direccion_form" type="text" class="form-control">
           </div>
           <div class="form-group">
             <label for="telefono_form">Teléfono: </label>
-            <input id="telefono_form" type="text" class="form-control" required>
+            <input id="telefono_form" type="text" class="form-control">
+            <p id="warning_telephone" class="text-danger"></p>
           </div>
+          <input type="hidden" id="user_id" value=<?php echo $_SESSION['user_id']?>>
           <button id="submit_factura" type="submit" class="btn btn-primary">Submit</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
         </form>

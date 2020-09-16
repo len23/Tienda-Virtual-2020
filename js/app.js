@@ -30,31 +30,32 @@ function addProduct(id_prod,user_id) {
 
 /* FACTURACION */
 let submit_factura_btn = document.getElementById('submit_factura');
-let nombres_form = document.getElementById('nombres_form').value;
-let apellidos_form = document.getElementById('apellidos_form').value;
+let nombres_form = document.getElementById('nombres_form');
+let apellidos_form = document.getElementById('apellidos_form');
 let cedula_form = document.getElementById('cedula_form');
-let direccion_form = document.getElementById('direccion_form').value;
-let telefono_form = document.getElementById('telefono_form').value;
+let direccion_form = document.getElementById('direccion_form');
+let telefono_form = document.getElementById('telefono_form');
+let user_id = document.getElementById('user_id');
 
-let url_form = window.location.hostname + '/Tienda-Virtual-2020/controllers/factura.php';
+let url_form = 'http://' + window.location.hostname + '/Tienda-Virtual-2020/controllers/factura.php';
 
 submit_factura_btn.addEventListener('click',function (e){
-  /* e.preventDefault(); */
-  /* if(nombres_form!='' && apellidos_form!='' && cedula_form!='' 
-  && direccion_form!='' && telefono_form!='') { */
-
-    let cedula = cedula_form.value;
-    console.log(cedula.length,cedula);
-    
-
-
-   /*  url_form += `?nombres=${nombres_form}&apellidos=${apellidos_form}&cedula=${cedula_form}&direccion=${direccion_form}&telefono=${telefono_form}`;
-    fetch(url_form, {
-      method: 'POST', // or 'PUT'
-    }).then(
-      res => console.log(res)
-      ) */
- /*  } */
+  e.preventDefault();
+  if(nombres_form.value!='' && apellidos_form.value!='' && cedula_form.value!='' 
+  && direccion_form.value!='' && telefono_form.value!='') {
+    if(validarCedula(cedula_form.value) && validarTelefono(telefono_form.value)) {
+      url_form += `?user_id=${user_id.value},nombres=${nombres_form.value}&apellidos=${apellidos_form.value}&cedula=${cedula_form.value}&direccion=${direccion_form.value}&telefono=${telefono_form.value}`;
+      fetch(url_form, {
+        method: 'POST', // or 'PUT'
+      }).then(
+        res => console.log(res)
+      );
+      submit_factura_btn.setAttribute('data-dismiss','modal');
+    }
+   
+  }else {
+    document.getElementById("general_warning").innerHTML="Aségurese de haber llenado todos los campos";
+  }
  
 });
 
@@ -108,7 +109,7 @@ function validarCedula(cedula) {
             var validig = 0;
           if(validig == verificadig){
             //alert('La cedula ' + cedula + ' es correcta');
-			  return false;
+			  return true;
 			  
           }else{
            alert('La cedula ' + cedula + ' es incorrecta');		
@@ -125,4 +126,18 @@ function validarCedula(cedula) {
         document.getElementById('warning_cedula').innerHTML=`La cedula ingresada no tiene 10 digitos`;  	
 		 return false;
      }  
+}
+
+function validarTelefono(inputtxt) { 
+ 
+  var regTel = /^\d{10}$/; 
+
+  document.getElementById('warning_telephone').innerHTML = '';
+  if(!regTel.test(inputtxt)) {
+    document.getElementById('warning_telephone').innerHTML = `El número de teléfono es inválido`;
+    return false;
+  } 
+    return true;
+
+
 }
