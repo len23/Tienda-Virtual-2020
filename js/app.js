@@ -44,7 +44,8 @@ submit_factura_btn.addEventListener('click',function (e){
   if(nombres_form.value!='' && apellidos_form.value!='' && cedula_form.value!='' 
   && direccion_form.value!='' && telefono_form.value!='') {
     if(validarCedula(cedula_form.value) && validarTelefono(telefono_form.value)) {
-      url_form += `?user_id=${user_id.value},nombres=${nombres_form.value}&apellidos=${apellidos_form.value}&cedula=${cedula_form.value}&direccion=${direccion_form.value}&telefono=${telefono_form.value}`;
+      url_form += `?user_id=${user_id.value}&nombres=${nombres_form.value}&apellidos=${apellidos_form.value}&cedula=${cedula_form.value}&direccion=${direccion_form.value}&telefono=${telefono_form.value}`;
+      console.log(url_form);
       fetch(url_form, {
         method: 'POST', // or 'PUT'
       }).then(
