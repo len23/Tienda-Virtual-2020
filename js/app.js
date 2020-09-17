@@ -51,7 +51,9 @@ submit_factura_btn.addEventListener('click',function (e){
       }).then(
         res => console.log(res)
       );
+      location.reload();
       submit_factura_btn.setAttribute('data-dismiss','modal');
+      
     }
    
   }else {

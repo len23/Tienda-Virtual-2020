@@ -16,7 +16,7 @@
       $data = mysqli_query($enlace, $query);
 
       if(mysqli_num_rows($data) == 0) {
-        $query = "INSERT INTO `usuario` (`user_id`, `ci`, `password`, `username`, `names`,`USUARIO_ESTADO`, `USUARIO_FECHAINGRES`) VALUES (NULL, '0401485370', SHA('$password1'), '$email','$names', NULL, NULL)";
+        $query = "INSERT INTO `usuario` (`user_id`, `password`, `username`, `names`,`Role`) VALUES (NULL, SHA('$password1'), '$email','$names', 'customer')";
         mysqli_query($enlace, $query);
       ?>
         <div class="container mt-5 text-center user_exists border py-4">
